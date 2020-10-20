@@ -1,0 +1,81 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: name path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_name
+  - action: utter_name
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: wellbeing path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_wellbeing
+  - action: utter_wellbeing
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: wellbeing path 2 
+  steps:
+  - intent: get_wellbeing
+  - action: utter_wellbeing
+
+- story: creator path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: creator
+  - action: utter_creator
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: creator path 2 
+  steps:
+  - intent: creator
+  - action: utter_creator
+
+- story: age path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: age
+  - action: utter_age
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: age path 2 
+  steps:
+  - intent: age
+  - action: utter_age
